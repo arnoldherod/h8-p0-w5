@@ -1,27 +1,3 @@
-// function highestScore (students) {
-//     // Code disini
-//     var objRes = {}
-
-//     for (var i = 0 ; i < students.length ; i++){
-//         var type = students[i]["class"]
-//         objRes[type] = {}
-//         for(var key in objRes){
-//             var max = 0
-//             if(students[i]["class"] === key && max < students[i]["score"]){
-//                     // console.log(max)
-//                     max = students[i]["score"]
-//                     objRes[type]["name"] = students[i]["name"]
-//                     objRes[type]["score"] = students[i]["score"]
-//                     // console.log(objRes)
-//                 }
-//             }
-//         }
-//         return objRes
-//     }
-// // }
-
-
-
 // REGEX
 
 
