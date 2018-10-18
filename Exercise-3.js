@@ -1,26 +1,24 @@
 function highestScore (students) {
-    // Code disini
-    var objRes = {}
-    
-    for (var i = 0 ; i < students.length ; i++){
-      var obj = {}
-      if (objRes[students[i]["class"]] === undefined){
-        obj["name"] = students[i]["name"]
-        obj["score"] = students[i]["score"]
-        objRes[students[i]["class"]] = obj
-      }
-        else{
-            if(students[i]["score"] > objRes["score"]){
-              obj["name"] = students[i]["name"]
-              obj["score"] = students[i]["score"]
-              objRes[students[i]["class"]] = obj
-            }
+  // Code disini
+  var objRes = {}
+
+  for (var i = 0 ; i < students.length ; i++){
+    var obj = {}
+    if (objRes[students[i]["class"]] === undefined){
+      obj["name"] = students[i]["name"]
+      obj["score"] = students[i]["score"]
+      objRes[students[i]["class"]] = obj
+    }
+      else{
+          if(objRes[students[i]["class"]]["score"] < students[i]["score"]){
+          obj["name"] = students[i]["name"]
+          obj["score"] = students[i]["score"]
+          objRes[students[i]["class"]] = obj
           }
-        }
-        return objRes
       }
-
-
+  }
+  return objRes
+}
 
       // TEST CASE
   console.log(highestScore([
